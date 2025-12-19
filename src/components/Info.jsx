@@ -28,13 +28,13 @@ const Info = () => {
 
   return (
     <section id="informacion" className="py-16 bg-white px-[5%]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="bg-ocean text-white rounded-xl shadow-xl overflow-hidden border-t-4 border-gold">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {infoItems.map((item, index) => (
               <div
                 key={index}
-                className="p-10 flex flex-col items-center text-center group hover:bg-white/5 transition-colors duration-300"
+                className="p-8 flex flex-col items-center text-center group hover:bg-white/5 transition-colors duration-300"
               >
                 {/* Icono */}
                 <div className="mb-4 text-gold transition-transform duration-300 group-hover:scale-110">

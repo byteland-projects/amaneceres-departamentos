@@ -47,7 +47,7 @@ const Header = () => {
             <a
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-[1rem] font-semibold uppercase text-gray-800 hover:text-gold transition-colors duration-300"
+              className="text-[0.85rem] font-semibold uppercase text-gray-800 hover:text-gold transition-colors duration-300"
             >
               {link.name}
             </a>

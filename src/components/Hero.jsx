@@ -39,12 +39,12 @@ const Hero = () => {
       {/* Contenido */}
       <div className="container mx-auto px-[7%] z-20">
         <div className="max-w-2xl text-left">
-          <h1 className="text-5xl md:text-7xl font-serif leading-tight">
+          <h1 className="text-5xl md:text-6xl font-serif leading-tight">
             <span className="text-white block">Tu hogar</span>
             <span className="text-gold block">frente al mar</span>
           </h1>
 
-          <p className="text-white/90 text-lg md:text-xl mt-6 mb-10 font-light max-w-lg leading-relaxed">
+          <p className="text-white/90 text-lg mt-6 mb-10 font-light max-w-lg leading-relaxed">
             Avenida Costanera y Calle 49. Descubrí la exclusividad de despertar
             con el sonido de las olas en la mejor ubicación de Santa Teresita.
           </p>
@@ -57,7 +57,7 @@ const Hero = () => {
               <i className="fas fa-home"></i> Ver Departamentos
             </a>
             <a
-              href="https://wa.me/54962929023"
+              href="https://wa.me/5491162929023"
               target="_blank"
               rel="noreferrer"
               className="px-8 py-4 border-2 border-white text-white font-bold uppercase text-sm tracking-widest rounded-full hover:bg-white/10 transition-all transform hover:scale-105 flex items-center gap-2"
