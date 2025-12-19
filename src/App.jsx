@@ -1,11 +1,18 @@
-function App() {
+import './App.css'
+import { Navigate, Route, Routes } from "react-router-dom"
+import Header from './components/Header';
+import Home from './pages/Home';
+
+const App = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-slate-900">
-      <h1 className="text-4xl font-bold text-sky-400 underline">
-        ¡React + Tailwind v4 funcionando!
-      </h1>
-    </div>
-  )
-}
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/*" element={ <Navigate to="/" /> } />
+      </Routes>
+    </>
+  );
+};
 
 export default App

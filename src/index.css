@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+@theme {
+  --color-ocean: #1a4b6e;
+  --color-ocean-light: #eef4f8;
+  --color-gold: #c5a059;
+  --color-gold-hover: #b38f4d;
+  
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-montserrat);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-playfair);
+}
