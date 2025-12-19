@@ -1,6 +1,6 @@
-@import "tailwindcss";
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+@import "tailwindcss";
 
 @theme {
   --color-ocean: #1a4b6e;
@@ -18,8 +18,10 @@ html {
 
 body {
   font-family: var(--font-montserrat);
+  color: #333;
 }
 
 h1, h2, h3 {
   font-family: var(--font-playfair);
+  color: var(--color-ocean);
 }
