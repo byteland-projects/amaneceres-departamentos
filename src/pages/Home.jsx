@@ -1,10 +1,12 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import Info from '../components/Info'
 
 export default function Home() {
   return (
     <div>
-       <Hero /> 
+       <Hero />
+       <Info />
     </div>
   )
 }
