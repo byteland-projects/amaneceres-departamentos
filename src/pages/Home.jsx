@@ -1,16 +1,23 @@
-import React from 'react'
-import Hero from '../components/Hero'
-import Info from '../components/Info'
-import Departments from '../components/Departments'
-import Services from '../components/Services'
+import InfoBanner from "../components/InfoBanner";
+import DepartmentGrid from "../components/DepartmentGrid";
+import Services from "../components/Services";
+import Location from "../components/Location";
+import Hero from "../components/Hero";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-       <Hero />
-       <Info />
-       <Departments />
-       <Services />
+    <div className="w-full">
+
+      <main>
+        <Hero/>
+        <InfoBanner />
+
+        <DepartmentGrid />
+        <Services />
+        <Location />
+      </main>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
