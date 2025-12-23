@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,12 +26,13 @@ const Navbar = () => {
         <ul className="hidden md:flex gap-8">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a 
-                href={link.href} 
+              <HashLink
+                smooth
+                to={`/${link.href}`}
                 className="text-sm uppercase font-bold tracking-widest text-gray-700 hover:text-gold transition-colors"
               >
                 {link.name}
-              </a>
+              </HashLink>
             </li>
           ))}
         </ul>
