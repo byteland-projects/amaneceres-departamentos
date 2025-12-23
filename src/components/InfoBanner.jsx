@@ -32,6 +32,7 @@ const InfoBanner = () => {
       className="relative max-w-250 mx-auto px-4 mt-10 mb-20 scroll-mt-24"
       aria-labelledby="info-banner-title"
     >
+      
       {/* Título oculto solo para SEO (Google lo lee, el usuario no lo ve) */}
       <h2 id="info-banner-title" className="sr-only">
         Información importante sobre la estadía

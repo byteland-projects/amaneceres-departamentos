@@ -11,7 +11,7 @@ const Location = () => {
         
         {/* Encabezado */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-display text-ocean mb-4">Ubicación Privilegiada</h2>
+          <h2 className="text-3xl font-serif md:text-4xl text-ocean mb-4">Ubicación Privilegiada</h2>
           <div className="w-16 h-1 bg-gold mx-auto mb-6"></div>
           <p className="text-lg font-semibold text-gray-700">Av. Costanera y Calle 49, Santa Teresita</p>
           <p className="text-gray-600 max-w-2xl mx-auto mt-2">

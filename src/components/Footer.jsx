@@ -40,9 +40,9 @@ const Footer = () => {
             <div className="w-10 h-0.5 bg-gold mb-6"></div>
             <ul className="space-y-2 text-sm text-left">
               {[
-                "Depto 7 (3 pers.)",
-                "Depto 12 (6 pers.)",
-                "Depto 13 (6 pers.)",
+                "Depto chico (3 pers.)",
+                "Depto grande (6 pers.)",
+                "Depto grande (6 pers.)",
                 "Depto Intermedio",
               ].map((depto) => (
                 <li key={depto}>
