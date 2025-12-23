@@ -72,4 +72,20 @@ export const heroImages = [
     alt: "Interior luminoso de un departamento con vista al mar",
   },
   { src: "/paisajes/hero-3.jpg", alt: "Balcón con vista al mar y mobiliario" },
+  {
+    src: "/paisajes/hero-4.jpg",
+    alt: "Vista desde abajo del atardecer en la playa",
+  },
+  {
+    src: "/paisajes/hero-5.jpg",
+    alt: "Departamento playero visto desde afuera",
+  },
+  {
+    src: "/paisajes/hero-6.jpg",
+    alt: "Paisaje del atarceder en la playa",
+  },
+  {
+    src: "/paisajes/hero-7.jpg",
+    alt: "Vista panorámica de la playa de día",
+  },
 ];
