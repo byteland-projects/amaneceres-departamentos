@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import { whatsappNumber } from "../data/data";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     <footer id="contacto" className="w-full bg-[#111] text-[#888] pt-16 pb-8">
       <div className="max-w-300 mx-auto px-6">
         <div className="flex flex-wrap gap-10 mb-12">
-          {/* Columna 1 */}
+          {/* Contacto */}
           <div className="flex-1 min-w-62.5">
             <h3 className="text-gold text-left font-display text-xl mb-2">
               Contacto
@@ -30,7 +32,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Columna 2 */}
+          {/* Departamentos */}
           <div className="flex-1 min-w-50">
             <h3 className="text-gold text-left font-display text-xl mb-2">
               Departamentos
@@ -44,18 +46,19 @@ const Footer = () => {
                 "Depto Intermedio",
               ].map((depto) => (
                 <li key={depto}>
-                  <a
-                    href="#departamentos"
-                    className="hover:text-white hover:pl-2 transition-all duration-300 italic"
+                  <HashLink
+                    smooth
+                    to="/#departamentos"
+                    className="hover:text-white hover:pl-2 transition-all duration-300 italic block"
                   >
                     {depto}
-                  </a>
+                  </HashLink>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Columna 3 */}
+          {/* Links */}
           <div className="flex-1 min-w-50">
             <h3 className="text-gold text-left font-display text-xl mb-2">
               Enlaces
@@ -68,14 +71,20 @@ const Footer = () => {
                 { label: "Ubicación", id: "ubicacion" },
               ].map((link) => (
                 <li key={link.id}>
-                  <a
-                    href={`#${link.id}`}
-                    className="hover:text-white hover:pl-2 transition-all duration-300"
+                  <HashLink
+                    smooth
+                    to={`/#${link.id}`}
+                    className="hover:text-white hover:pl-2 transition-all duration-300 block"
                   >
                     {link.label}
-                  </a>
+                  </HashLink>
                 </li>
               ))}
+              <li>
+                <Link to="/legales" className="hover:text-gold transition-colors italic">
+                  Términos y Privacidad
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

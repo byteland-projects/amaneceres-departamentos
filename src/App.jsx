@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Navbar from '/src/components/NavBar.jsx';
 import Footer from "/src/components/Footer.jsx";
 import WhatsAppButton from './components/WhatsappButton';
+import Legales from "./pages/Legales";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={ <Home /> } />
+        <Route path="/legales" element={<Legales />} />
         <Route path="/*" element={ <Navigate to="/" /> } />
       </Routes>
       <Footer />
