@@ -10,7 +10,9 @@ const Services = () => {
             Servicios Incluidos
           </h2>
           <div className="w-16 h-1 bg-gold mx-auto mb-6"></div>
-          <p className="text-slate-500 text-sm md:text-base max-w-lg mx-auto">            Todos nuestros departamentos cuentan con estos servicios para
+          <p className="text-slate-500 text-sm md:text-base max-w-lg mx-auto">
+            {" "}
+            Todos nuestros departamentos cuentan con estos servicios para
             brindar la máxima comodidad durante tu estadía.
           </p>
         </div>
@@ -21,10 +23,14 @@ const Services = () => {
               key={index}
               className="group flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg w-[calc(50%-1rem)] md:w-[calc(25%-1rem)] transition-all duration-300 hover:bg-ocean-light hover:-translate-y-1"
             >
+              ´<span className="sr-only">Servicio incluido: </span>
               <i
                 className={`fas ${service.icon} text-3xl text-gold mb-3 transition-transform group-hover:scale-110`}
+                aria-hidden="true"
               ></i>
-              <p className="text-ocean font-bold text-center text-[11px] md:text-xs uppercase tracking-wider">                {service.label}
+              <p className="text-ocean font-bold text-center text-[11px] md:text-xs uppercase tracking-wider">
+                {" "}
+                {service.label}
               </p>
             </li>
           ))}

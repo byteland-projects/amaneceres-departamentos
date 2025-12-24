@@ -13,11 +13,14 @@ const Location = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-serif md:text-4xl text-ocean mb-4">Ubicación Privilegiada</h2>
           <div className="w-16 h-1 bg-gold mx-auto mb-6"></div>
-          <p className="text-lg font-semibold text-gray-700">Av. Costanera y Calle 49, Santa Teresita</p>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-2">
-            Nuestro edificio se encuentra en la mejor zona de Santa Teresita, 
-            frente al mar y a pocos pasos del centro comercial.
-          </p>
+          <address className="not-italic">
+            <p className="text-lg font-semibold text-gray-700">
+              Av. Costanera y Calle 49, Santa Teresita, Buenos Aires
+            </p>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-2">
+              Edificio <strong>Amaneceres Deptos</strong>: Nuestro edificio se encuentra en la mejor zona. Frente al mar, a pasos del centro comercial de Santa Teresita.
+            </p>
+          </address>
         </div>
 
         {/* Contenedor del Mapa - Usamos Flex para centrarlo */}
@@ -31,7 +34,7 @@ const Location = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Mapa de ubicación"
+              title="Ubicación de Amaneceres Deptos en Santa Teresita frente al mar"
             ></iframe>
           </div>
         </div>
@@ -43,8 +46,8 @@ const Location = () => {
               key={i} 
               className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center w-full sm:w-70 border-b-4 border-transparent hover:border-gold transition-all"
             >
-              <i className={`fas ${f.icon} text-2xl text-gold mb-3`}></i>
-              <h5 className="font-bold text-ocean">{f.title}</h5>
+              <i className={`fas ${f.icon} text-2xl text-gold mb-3`} aria-hidden="true"></i>
+              <h3 className="font-bold text-ocean">{f.title}</h3>
               <p className="text-sm text-gray-500">{f.desc}</p>
             </div>
           ))}

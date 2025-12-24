@@ -6,7 +6,7 @@ export const departments = [
     title: "Departamento 7",
     capacity: "Hasta 3 personas",
     price: "85.000",
-    images: Array.from({ length: 15 }, (_, i) => `/depto7/img (${i + 1}).jpg`),
+    images: Array.from({ length: 14 }, (_, i) => `/depto7/img (${i + 1}).jpg`),
     description:
       "Departamento acogedor con vista directa al mar. Ideal para parejas o familias pequeñas.",
     size: "45 m²",
@@ -30,7 +30,7 @@ export const departments = [
     title: "Departamento 13",
     capacity: "Hasta 6 personas",
     price: "95.000",
-    images: Array.from({ length: 2 }, (_, i) => `/depto13/img (${i + 1}).jpg`),
+    images: Array.from({ length: 7 }, (_, i) => `/depto13/img (${i + 1}).jpg`),
     description:
       "Espacioso y completamente equipado. La mejor vista panorámica y todos los servicios.",
     size: "85 m²",
@@ -54,7 +54,7 @@ export const departments = [
 export const services = [
   { icon: "fa-wifi", label: "Wi-Fi Alta Velocidad" },
   { icon: "fa-tv", label: "Smart TV" },
-  { icon: "fa-car", label: "Cochera Cubierta" },
+  { icon: "fa-car", label: "Cochera Privada" },
   { icon: "fa-fire", label: "Gas Natural" },
   { icon: "fa-snowflake", label: "Heladera con Freezer" },
   { icon: "fa-utensils", label: "Cocina Equipada" },
@@ -65,27 +65,30 @@ export const services = [
 export const heroImages = [
   {
     src: "/paisajes/hero-1.jpg",
-    alt: "Vista panorámica de la playa al amanecer",
+    alt: "Amanecer frente al mar en Santa Teresita - Vista desde los departamentos",
   },
   {
     src: "/paisajes/hero-2.jpg",
-    alt: "Interior luminoso de un departamento con vista al mar",
+    alt: "Alquiler temporal en Santa Teresita - Interior luminoso con vista al mar",
   },
-  { src: "/paisajes/hero-3.jpg", alt: "Balcón con vista al mar y mobiliario" },
+  {
+    src: "/paisajes/hero-3.jpg",
+    alt: "Balcón terraza de departamento frente al mar en Santa Teresita",
+  },
   {
     src: "/paisajes/hero-4.jpg",
-    alt: "Vista desde abajo del atardecer en la playa",
+    alt: "Playa de Santa Teresita al atardecer zona costanera y 49",
   },
   {
     src: "/paisajes/hero-5.jpg",
-    alt: "Departamento playero visto desde afuera",
+    alt: "Fachada del edificio Amaneceres Deptos en Santa Teresita",
   },
   {
     src: "/paisajes/hero-6.jpg",
-    alt: "Paisaje del atarceder en la playa",
+    alt: "Paisaje costero de Santa Teresita Buenos Aires",
   },
   {
     src: "/paisajes/hero-7.jpg",
-    alt: "Vista panorámica de la playa de día",
+    alt: "Vista aérea de la costa en Santa Teresita",
   },
 ];

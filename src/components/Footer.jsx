@@ -22,12 +22,25 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <i className="fas fa-phone text-gold"></i>
                 <span>
-                  {`+${whatsappNumber.slice(0, 2)} ${whatsappNumber.slice(2, 3)} ${whatsappNumber.slice(3, 4)} ${whatsappNumber.slice(4, 5)} ${whatsappNumber.slice(5, 9)}-${whatsappNumber.slice(9)}`}
+                  {`+${whatsappNumber.slice(0, 2)} ${whatsappNumber.slice(
+                    2,
+                    3
+                  )} ${whatsappNumber.slice(3, 4)} ${whatsappNumber.slice(
+                    4,
+                    5
+                  )} ${whatsappNumber.slice(5, 9)}-${whatsappNumber.slice(9)}`}
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <i className="fab fa-whatsapp text-gold"></i>
-                <a href={`https://wa.me/${whatsappNumber}?text=Hola! Me interesa hacer una reserva.`} target="_blank" rel="noopener noreferrer" className="hover:text-white hover:pl-2 transition-all duration-300 italic">WhatsApp para reservas</a>
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=Hola! Me interesa hacer una reserva.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white hover:pl-2 transition-all duration-300 italic"
+                >
+                  WhatsApp para reservas
+                </a>
               </li>
             </ul>
           </div>
@@ -40,18 +53,31 @@ const Footer = () => {
             <div className="w-10 h-0.5 bg-gold mb-6"></div>
             <ul className="space-y-2 text-sm text-left">
               {[
-                "Depto chico (3 pers.)",
-                "Depto grande 1 (6 pers.)",
-                "Depto grande 2 (6 pers.)",
-                "Depto Intermedio",
+                {
+                  name: "Depto chico (3 pers.)",
+                  keyword: "Departamento para 3 personas en Santa Teresita",
+                },
+                {
+                  name: "Depto grande 1 (6 pers.)",
+                  keyword: "Departamento para 6 personas frente al mar",
+                },
+                {
+                  name: "Depto grande 2 (6 pers.)",
+                  keyword: "Alquiler familiar frente al mar",
+                },
+                {
+                  name: "Depto Intermedio",
+                  keyword: "Departamento 4-5 personas cómodo",
+                },
               ].map((depto) => (
-                <li key={depto}>
+                <li key={depto.name}>
                   <HashLink
                     smooth
                     to="/#departamentos"
+                    aria-label={depto.keyword} // Google lee esto para entender a dónde lleva el link
                     className="hover:text-white hover:pl-2 transition-all duration-300 italic block"
                   >
-                    {depto}
+                    {depto.name}
                   </HashLink>
                 </li>
               ))}
@@ -81,7 +107,10 @@ const Footer = () => {
                 </li>
               ))}
               <li>
-                <Link to="/legales" className="hover:text-gold transition-colors italic">
+                <Link
+                  to="/legales"
+                  className="hover:text-gold transition-colors italic"
+                >
                   Términos y Privacidad
                 </Link>
               </li>

@@ -23,6 +23,8 @@ const Hero = () => {
           <img
             key={index}
             src={image.src}
+            loading={index === 0 ? "eager" : "lazy"}
+            fetchpriority={index === 0 ? "high" : "low"}
             className={`absolute inset-0 w-full h-full object-cover
                         transition-opacity duration-1000 ease-in-out animate-slow-zoom
                         ${
@@ -40,10 +42,14 @@ const Hero = () => {
       {/* Contenido (H1, P, Botones) */}
       <div className="relative z-10 max-w-300 mx-auto px-6 w-full">
         <div className="max-w-150 text-left">
-          <h1 className="text-white text-5xl md:text-7xl font-display mb-6 leading-tight">
+          <h1 className="text-gold text-xs md:text-sm font-bold uppercase tracking-[0.4em] mb-2 block antialiased">
+            Alquiler de Departamentos en Santa Teresita
+          </h1>
+
+          <h2 className="text-white text-5xl md:text-7xl font-display mb-6 leading-tight">
             Tu hogar <br />
             <span className="text-gold">frente al mar</span>
-          </h1>
+          </h2>
 
           <p className="text-white/90 text-lg md:text-xl mb-10 max-w-125 font-body">
             Avenida Costanera y Calle 49. <br />

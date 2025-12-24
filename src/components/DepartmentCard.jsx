@@ -55,7 +55,8 @@ const DepartmentCard = ({ info }) => {
         >
           <img
             src={info.images[0]}
-            alt={friendlyTitle}
+            alt={`${friendlyTitle} en Santa Teresita - Amaneceres Deptos`}
+            loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -73,6 +74,9 @@ const DepartmentCard = ({ info }) => {
         <div className="p-6 flex flex-col grow">
           <div className="flex justify-between items-start mb-3">
             <h3 className="text-xl font-serif text-ocean leading-tight">
+              <span className="sr-only">
+                Alquiler de departamento en Santa Teresita:{" "}
+              </span>
               {friendlyTitle}
             </h3>
             <div className="text-right">
@@ -83,7 +87,10 @@ const DepartmentCard = ({ info }) => {
             </div>
           </div>
 
-          <p className="text-slate-500 text-sm mb-4 line-clamp-2 italic leading-relaxed">
+          <p
+            className="text-slate-500 text-sm mb-4 line-clamp-2 italic leading-relaxed"
+            aria-label={`Alquiler de departamento en Santa Teresita: ${info.description}`}
+          >
             "{info.description}"
           </p>
 
@@ -146,7 +153,7 @@ const DepartmentCard = ({ info }) => {
             <img
               src={info.images[currentImgIndex]}
               className="max-h-[85vh] max-w-full object-contain rounded shadow-2xl"
-              alt="Galería"
+              alt={`Foto ${currentImgIndex + 1} de ${friendlyTitle}`}
               onClick={(e) => e.stopPropagation()}
             />
 
