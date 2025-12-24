@@ -28,14 +28,15 @@ const DepartmentCard = ({ info }) => {
     );
   };
 
-  // Lógica de nombres solicitada por la cliente
   const getFriendlyTitle = (id) => {
     const idsChico = ["7", 7];
-    const idsGrande = ["12", 12, "13", 13];
+    const idsGrande = ["12", 12];
+    const idsGrande2 = ["13", 13];
     const idsIntermedio = ["Intermedio", "6", 6];
 
     if (idsChico.includes(id)) return "Departamento Chico";
-    if (idsGrande.includes(id)) return "Departamento Grande";
+    if (idsGrande.includes(id)) return "Departamento Grande 1";
+    if (idsGrande2.includes(id)) return "Departamento Grande 2";
     if (idsIntermedio.includes(id)) return "Departamento Intermedio";
     return info.title;
   };

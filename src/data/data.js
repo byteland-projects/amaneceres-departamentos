@@ -1,4 +1,4 @@
-export const whatsappNumber = "5491169603403";
+export const whatsappNumber = "5491162929023";
 
 export const departments = [
   {
@@ -46,7 +46,7 @@ export const departments = [
     description:
       "Tamaño intermedio. Equilibrio perfecto entre espacio y confort.",
     size: "65 m²",
-    badge: "Intermedio",
+    badge: "Cómodo",
     features: ["Equipamiento completo", "Céntrico"],
   },
 ];
