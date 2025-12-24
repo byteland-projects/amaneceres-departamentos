@@ -125,23 +125,32 @@ const DepartmentCard = ({ info }) => {
           className="fixed inset-0 z-9999 bg-black/95 flex items-center justify-center backdrop-blur-sm"
           onClick={() => setIsModalOpen(false)}
         >
-          <button className="absolute top-6 right-6 text-white/70 hover:text-white text-4xl p-2 transition-colors">
+          {/* Botón Cerrar - Superior derecho */}
+          <button
+            className="absolute top-6 right-6 text-white/70 hover:text-white text-4xl p-2 z-60 transition-colors"
+            onClick={() => setIsModalOpen(false)}
+          >
             <i className="fas fa-times"></i>
           </button>
+
+          {/* Flecha Izquierda - Forzada al frente con z-50 */}
           <button
-            className="absolute left-4 md:left-10 bg-white/10 hover:bg-gold text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-colors"
+            className="absolute left-4 md:left-10 bg-white/10 hover:bg-gold text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-colors z-50 shadow-lg"
             onClick={prevImage}
           >
             <i className="fas fa-chevron-left text-2xl"></i>
           </button>
 
-          <div className="relative w-full max-w-5xl px-4 flex flex-col items-center">
+          {/* Contenedor de Imagen */}
+          <div className="relative w-full h-full flex flex-col items-center justify-center p-2">
             <img
               src={info.images[currentImgIndex]}
-              className="max-h-[80vh] w-auto object-contain rounded shadow-2xl"
+              className="max-h-[85vh] max-w-full object-contain rounded shadow-2xl"
               alt="Galería"
               onClick={(e) => e.stopPropagation()}
             />
+
+            {/* Contador de fotos */}
             <div className="mt-6 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/10">
               <p className="text-white text-sm tracking-widest uppercase">
                 {currentImgIndex + 1} <span className="text-gold mx-1">/</span>{" "}
@@ -150,8 +159,9 @@ const DepartmentCard = ({ info }) => {
             </div>
           </div>
 
+          {/* Flecha Derecha - Forzada al frente con z-50 */}
           <button
-            className="absolute right-4 md:right-10 bg-white/10 hover:bg-gold text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-colors"
+            className="absolute right-4 md:right-10 bg-white/10 hover:bg-gold text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-colors z-50 shadow-lg"
             onClick={nextImage}
           >
             <i className="fas fa-chevron-right text-2xl"></i>
