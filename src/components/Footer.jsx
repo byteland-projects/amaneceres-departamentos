@@ -58,11 +58,11 @@ const Footer = () => {
                   keyword: "Departamento para 3 personas en Santa Teresita",
                 },
                 {
-                  name: "Depto grande 1 (6 pers.)",
+                  name: "Depto grande (6 pers.)",
                   keyword: "Departamento para 6 personas frente al mar",
                 },
                 {
-                  name: "Depto grande 2 (6 pers.)",
+                  name: "Depto grande (6 pers.)",
                   keyword: "Alquiler familiar frente al mar",
                 },
                 {

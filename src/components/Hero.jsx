@@ -47,7 +47,7 @@ const Hero = () => {
           </h1>
 
           <h2 className="text-white text-5xl md:text-7xl font-display mb-6 leading-tight">
-            Tu hogar <br />
+            Tu descanso <br />
             <span className="text-gold">frente al mar</span>
           </h2>
 
