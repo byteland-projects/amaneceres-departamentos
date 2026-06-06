@@ -97,12 +97,12 @@ const Footer = () => {
           <p>
             © {new Date().getFullYear()} Sitio desarrollado por{" "}
             <a
-              href="https://byteland.com.ar"
+              href="https://entercode.com.ar"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold hover:text-white transition-colors duration-300 font-semibold"
             >
-              Byteland
+              EnterCode
             </a>
             . Todos los derechos reservados.
           </p>
