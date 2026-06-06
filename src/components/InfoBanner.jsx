@@ -2,9 +2,9 @@ const InfoBanner = () => {
   const infoItems = [
     {
       icon: "fa-calendar-check",
-      title: "Estadía Mínima",
-      detail: "Enero y Febrero",
-      subDetail: "Mínimo 6 días de estadía",
+      title: "Estadía mínima",
+      detail: "Mínimo 6 días",
+      subDetail: "Alquiler temporario",
     },
     {
       icon: "fa-clock",
@@ -32,10 +32,9 @@ const InfoBanner = () => {
       className="relative max-w-250 mx-auto px-4 mt-10 mb-20 scroll-mt-24"
       aria-labelledby="info-banner-title"
     >
-      
       {/* Título oculto solo para SEO (Google lo lee, el usuario no lo ve) */}
       <h2 id="info-banner-title" className="sr-only">
-        Información importante sobre la estadía
+        Información sobre el alquiler en Santa Teresita
       </h2>
 
       <div className="bg-ocean rounded-xl p-8 shadow-2xl flex flex-wrap justify-between gap-8 md:gap-4 text-center border-t-4 border-gold overflow-hidden">

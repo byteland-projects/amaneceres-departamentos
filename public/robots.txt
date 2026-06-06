@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amaneceresdeptos.com.ar/sitemap.xml

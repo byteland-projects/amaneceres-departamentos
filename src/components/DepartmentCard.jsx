@@ -28,7 +28,6 @@ const DepartmentCard = ({ info }) => {
     );
   };
 
-  // Lógica de nombres solicitada por la cliente
   const getFriendlyTitle = (id) => {
     const idsChico = ["7", 7];
     const idsGrande = ["12", 12, "13", 13];
@@ -54,7 +53,8 @@ const DepartmentCard = ({ info }) => {
         >
           <img
             src={info.images[0]}
-            alt={friendlyTitle}
+            alt={`${friendlyTitle} en Santa Teresita - Amaneceres Deptos`}
+            loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -72,6 +72,9 @@ const DepartmentCard = ({ info }) => {
         <div className="p-6 flex flex-col grow">
           <div className="flex justify-between items-start mb-3">
             <h3 className="text-xl font-serif text-ocean leading-tight">
+              <span className="sr-only">
+                Alquiler de departamento en Santa Teresita:{" "}
+              </span>
               {friendlyTitle}
             </h3>
             <div className="text-right">
@@ -82,7 +85,10 @@ const DepartmentCard = ({ info }) => {
             </div>
           </div>
 
-          <p className="text-slate-500 text-sm mb-4 line-clamp-2 italic leading-relaxed">
+          <p
+            className="text-slate-500 text-sm mb-4 line-clamp-2 italic leading-relaxed"
+            aria-label={`Alquiler de departamento en Santa Teresita: ${info.description}`}
+          >
             "{info.description}"
           </p>
 
@@ -124,23 +130,32 @@ const DepartmentCard = ({ info }) => {
           className="fixed inset-0 z-9999 bg-black/95 flex items-center justify-center backdrop-blur-sm"
           onClick={() => setIsModalOpen(false)}
         >
-          <button className="absolute top-6 right-6 text-white/70 hover:text-white text-4xl p-2 transition-colors">
+          {/* Botón Cerrar - Superior derecho */}
+          <button
+            className="absolute top-6 right-6 text-white/70 hover:text-white text-4xl p-2 z-60 transition-colors"
+            onClick={() => setIsModalOpen(false)}
+          >
             <i className="fas fa-times"></i>
           </button>
+
+          {/* Flecha Izquierda - Forzada al frente con z-50 */}
           <button
-            className="absolute left-4 md:left-10 bg-white/10 hover:bg-gold text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-colors"
+            className="absolute left-4 md:left-10 bg-white/10 hover:bg-gold text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-colors z-50 shadow-lg"
             onClick={prevImage}
           >
             <i className="fas fa-chevron-left text-2xl"></i>
           </button>
 
-          <div className="relative w-full max-w-5xl px-4 flex flex-col items-center">
+          {/* Contenedor de Imagen */}
+          <div className="relative w-full h-full flex flex-col items-center justify-center p-2">
             <img
               src={info.images[currentImgIndex]}
-              className="max-h-[80vh] w-auto object-contain rounded shadow-2xl"
-              alt="Galería"
+              className="max-h-[85vh] max-w-full object-contain rounded shadow-2xl"
+              alt={`Foto ${currentImgIndex + 1} de ${friendlyTitle}`}
               onClick={(e) => e.stopPropagation()}
             />
+
+            {/* Contador de fotos */}
             <div className="mt-6 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/10">
               <p className="text-white text-sm tracking-widest uppercase">
                 {currentImgIndex + 1} <span className="text-gold mx-1">/</span>{" "}
@@ -149,8 +164,9 @@ const DepartmentCard = ({ info }) => {
             </div>
           </div>
 
+          {/* Flecha Derecha - Forzada al frente con z-50 */}
           <button
-            className="absolute right-4 md:right-10 bg-white/10 hover:bg-gold text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-colors"
+            className="absolute right-4 md:right-10 bg-white/10 hover:bg-gold text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-colors z-50 shadow-lg"
             onClick={nextImage}
           >
             <i className="fas fa-chevron-right text-2xl"></i>

@@ -19,7 +19,7 @@ const Navbar = () => {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 text-ocean text-2xl tracking-tight">
           <i className="fas fa-umbrella-beach text-gold"></i>
-          <h1 className="lg:text-2xl text-xl">AMANECERES DEPTOS</h1>
+          <span className="lg:text-2xl text-xl">AMANECERES DEPTOS</span>
         </a>
 
         {/* Desktop Menu */}
